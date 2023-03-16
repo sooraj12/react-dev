@@ -16,6 +16,12 @@ const root2 = ReactDOM.createRoot(document.getElementById("root"));
 // );
 root.render(<App />);
 
+const NoContext = 0b000;
+const RenderContext = 0b010;
+const CommitContext = 0b100;
+
+console.log(NoContext & (RenderContext | CommitContext));
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
